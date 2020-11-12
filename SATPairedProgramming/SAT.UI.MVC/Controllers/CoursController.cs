@@ -9,7 +9,7 @@ using System.Web.Mvc;
 using SAT.DATA.EF;
 
 namespace SAT.UI.MVC.Controllers
-{
+{//add student counter?
     public class CoursController : Controller
     {
         private SATDatabaseEntities db = new SATDatabaseEntities();

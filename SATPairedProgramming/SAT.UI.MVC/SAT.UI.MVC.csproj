@@ -339,6 +339,8 @@
     <Content Include="Views\StudentStatus\Details.cshtml" />
     <Content Include="Views\StudentStatus\Edit.cshtml" />
     <Content Include="Views\StudentStatus\Index.cshtml" />
+    <Content Include="Views\Account\AdminMenu.cshtml" />
+    <Content Include="Views\Cours\Index - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAT.DATA.EF\SAT.DATA.EF.csproj">

@@ -8,9 +8,9 @@
 
 @if (User.IsInRole("Admin") && Request.IsAuthenticated)
 {
-    <p>
-        @Html.ActionLink("Create New", "Create")
-        @Html.ActionLink("View as Table", "GenreTable", "Genres", null, new { @class = "btn btn-secondary" })
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("View as Table", "GenreTable", "Genres", null, new { @class = "btn btn-secondary" })
     </p>
 }
 <table class="table" id="table_id">
@@ -72,54 +72,27 @@
         }
     </tbody>
 </table>
+@*<section class="section courses" data-section="section4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 
-@foreach (var item in Model)
-{
-    <div class="gContainer">
-        <div class="gContent">
-            @Html.DisplayFor(modelItem => item.CourseName)
-        </div>
-        <div class="gFooterLeft">
-            @Html.ActionLink("Edit", "Edit", new { id = item.CourseId })
-        </div>
-        <div class="gFooterRight">
-            @if (item.Books.Count == 0)
-            {
-                @Html.ActionLink("Delete", "Delete", new { id = item.GenreID })
-            }
-            else
-            {
-                <span class="font-weight-bold text-danger">Genre Is In Use</span>
-            }
-        </div>
-    </div>
-
-
-
-
-
-
-    @*<section class="section courses" data-section="section4">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <div class="owl-carousel owl-theme">
-                            <div class="item">
-                                <img src="~/Content/assets/images/courses-01.jpg" alt="Course #1">
-                                <div class="down-content">
-                                    <h4>Digital Marketing</h4>
-                                    <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
-                                    <div class="author-image">
-                                        <img src="~/Content/assets/images/author-01.png" alt="Author 1">
-                                    </div>
-                                    <div class="text-button-pay">
-                                        <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
-                                    </div>
-                                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="~/Content/assets/images/courses-01.jpg" alt="Course #1">
+                        <div class="down-content">
+                            <h4>Digital Marketing</h4>
+                            <p>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</p>
+                            <div class="author-image">
+                                <img src="~/Content/assets/images/author-01.png" alt="Author 1">
+                            </div>
+                            <div class="text-button-pay">
+                                <a href="#">Pay <i class="fa fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>*@
+        </div>
+    </div>
+</section>*@

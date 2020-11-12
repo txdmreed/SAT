@@ -56,6 +56,13 @@ namespace SAT.UI.MVC.Controllers
             private set { _signInManager = value; }
         }
 
+        [HttpGet]
+        [Authorize(Roles = "Admin, Scheduler")]
+        public ActionResult AdminMenu()
+        {
+            return View();
+        }
+
         //
         // POST: /Account/Login
         [HttpPost]

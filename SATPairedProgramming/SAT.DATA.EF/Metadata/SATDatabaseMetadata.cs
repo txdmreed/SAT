@@ -78,10 +78,10 @@ namespace SAT.DATA.EF
     [MetadataType(typeof(ScheduledClassMetadata))]
     public partial class ScheduledClass
     {
-        [Display(Name = "Full Course Information")]
+        [Display(Name = "Name - Start Date | Location | Instructor")]
         public string FullCourseInfo
         {
-            get { return ($"{Cours.CourseName} | {StartDate:d} | {Location} | ({InstructorName})"); } 
+            get { return ($" {Cours.CourseName} - {StartDate:d} | {Location} | {InstructorName}"); } 
         }
     }
 
