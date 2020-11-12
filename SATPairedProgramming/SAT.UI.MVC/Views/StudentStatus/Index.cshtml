@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SAT.DATA.EF.StudentStatus>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (User.IsInRole("Admin") && Request.IsAuthenticated)
+{
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SSName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SSDescription)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SSName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SSDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.SSID })
+                @if (User.IsInRole("Admin"))
+                {
+                    <span>|</span>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SSID })
+                    <span>|</span>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.SSID })
+                }
+            </td>
+        </tr>
+    }
+
+</table>

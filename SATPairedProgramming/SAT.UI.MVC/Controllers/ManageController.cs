@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace SAT.UI.MVC.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class ManageController : Controller
     {
         public ManageController()
@@ -36,6 +36,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/Index
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
@@ -62,6 +63,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/RemoveLogin
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult RemoveLogin()
         {
@@ -72,6 +74,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/RemoveLogin
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RemoveLogin(string loginProvider, string providerKey)
@@ -97,6 +100,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/AddPhoneNumber
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult AddPhoneNumber()
         {
@@ -105,6 +109,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/AddPhoneNumber
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddPhoneNumber(AddPhoneNumberViewModel model)
@@ -129,6 +134,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/RememberBrowser
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RememberBrowser()
@@ -140,6 +146,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/ForgetBrowser
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ForgetBrowser()
@@ -150,6 +157,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/EnableTFA
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTFA()
@@ -166,6 +174,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/DisableTFA
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DisableTFA()
@@ -182,6 +191,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/VerifyPhoneNumber
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult> VerifyPhoneNumber(string phoneNumber)
         {
@@ -194,6 +204,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/VerifyPhoneNumber
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> VerifyPhoneNumber(VerifyPhoneNumberViewModel model)
@@ -220,6 +231,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/RemovePhoneNumber
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult> RemovePhoneNumber()
         {
@@ -239,6 +251,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Manage/ChangePassword
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult ChangePassword()
         {
@@ -247,6 +260,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/Manage
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
@@ -272,6 +286,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Manage/SetPassword
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult SetPassword()
         {
@@ -280,6 +295,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/SetPassword
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> SetPassword(SetPasswordViewModel model)
@@ -306,6 +322,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/Manage
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> ManageLogins(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -330,6 +347,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Manage/LinkLogin
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LinkLogin(string provider)
@@ -340,6 +358,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Manage/LinkLoginCallback
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> LinkLoginCallback()
         {
             var userId = User.Identity.GetUserId();

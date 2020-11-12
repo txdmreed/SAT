@@ -168,9 +168,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CoursController.cs" />
+    <Compile Include="Controllers\EnrollmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\ScheduledClassesController.cs" />
+    <Compile Include="Controllers\ScheduledClassStatusController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\StudentStatusController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -183,29 +189,58 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\assets\css\flex-slider.css" />
+    <Content Include="Content\assets\css\fontawesome.css" />
+    <Content Include="Content\assets\css\lightbox.css" />
+    <Content Include="Content\assets\css\owl.css" />
+    <Content Include="Content\assets\css\templatemo-grad-school.css" />
+    <Content Include="Content\assets\fonts\flexslider-icon.svg" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\fonts\slick.svg" />
+    <Content Include="Content\assets\images\author-01.png" />
+    <Content Include="Content\assets\images\author-02.png" />
+    <Content Include="Content\assets\images\author-03.png" />
+    <Content Include="Content\assets\images\author-04.png" />
+    <Content Include="Content\assets\images\author-05.png" />
+    <Content Include="Content\assets\images\choose-us-image-01.png" />
+    <Content Include="Content\assets\images\choose-us-image-02.png" />
+    <Content Include="Content\assets\images\choose-us-image-03.png" />
+    <Content Include="Content\assets\images\choosing-bg.jpg" />
+    <Content Include="Content\assets\images\close.png" />
+    <Content Include="Content\assets\images\coming-soon-bg.jpg" />
+    <Content Include="Content\assets\images\contact-bg.jpg" />
+    <Content Include="Content\assets\images\course-video.mp4" />
+    <Content Include="Content\assets\images\courses-01.jpg" />
+    <Content Include="Content\assets\images\courses-02.jpg" />
+    <Content Include="Content\assets\images\courses-03.jpg" />
+    <Content Include="Content\assets\images\courses-04.jpg" />
+    <Content Include="Content\assets\images\courses-05.jpg" />
+    <Content Include="Content\assets\images\courses-bg.jpg" />
+    <Content Include="Content\assets\images\loading.gif" />
+    <Content Include="Content\assets\images\main-slider-01.jpg" />
+    <Content Include="Content\assets\images\main-slider-02.jpg" />
+    <Content Include="Content\assets\images\main-slider-03.jpg" />
+    <Content Include="Content\assets\images\main-thumb.png" />
+    <Content Include="Content\assets\images\next.png" />
+    <Content Include="Content\assets\images\prev.png" />
+    <Content Include="Content\assets\images\video-bg.jpg" />
+    <Content Include="Content\assets\images\video-thumb-01.jpg" />
+    <Content Include="Content\assets\images\video-thumb-02.jpg" />
+    <Content Include="Content\assets\js\custom.js" />
+    <Content Include="Content\assets\js\isotope.min.js" />
+    <Content Include="Content\assets\js\lightbox.js" />
+    <Content Include="Content\assets\js\owl-carousel.js" />
+    <Content Include="Content\assets\js\slick-slider.js" />
+    <Content Include="Content\assets\js\tabs.js" />
+    <Content Include="Content\assets\js\video.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\jquery\jquery.js" />
+    <Content Include="vendor\jquery\jquery.min.js" />
+    <Content Include="vendor\jquery\jquery.slim.js" />
+    <Content Include="vendor\jquery\jquery.slim.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -218,7 +253,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -251,22 +285,66 @@
     <Content Include="Views\RolesAdmin\Delete.cshtml" />
     <Content Include="Views\RolesAdmin\Create.cshtml" />
     <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Shared\_OriginalLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\assets\fonts\Flaticon.woff" />
+    <Content Include="Content\assets\fonts\flexslider-icon.eot" />
+    <Content Include="Content\assets\fonts\flexslider-icon.ttf" />
+    <Content Include="Content\assets\fonts\flexslider-icon.woff" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\assets\fonts\FontAwesome.otf" />
+    <Content Include="Content\assets\fonts\slick.eot" />
+    <Content Include="Content\assets\fonts\slick.ttf" />
+    <Content Include="Content\assets\fonts\slick.woff" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="vendor\jquery\jquery.min.map" />
+    <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Cours\Create.cshtml" />
+    <Content Include="Views\Cours\Delete.cshtml" />
+    <Content Include="Views\Cours\Details.cshtml" />
+    <Content Include="Views\Cours\Edit.cshtml" />
+    <Content Include="Views\Cours\Index.cshtml" />
+    <Content Include="Views\Enrollments\Create.cshtml" />
+    <Content Include="Views\Enrollments\Delete.cshtml" />
+    <Content Include="Views\Enrollments\Details.cshtml" />
+    <Content Include="Views\Enrollments\Edit.cshtml" />
+    <Content Include="Views\Enrollments\Index.cshtml" />
+    <Content Include="Views\ScheduledClasses\Create.cshtml" />
+    <Content Include="Views\ScheduledClasses\Delete.cshtml" />
+    <Content Include="Views\ScheduledClasses\Details.cshtml" />
+    <Content Include="Views\ScheduledClasses\Edit.cshtml" />
+    <Content Include="Views\ScheduledClasses\Index.cshtml" />
+    <Content Include="Views\ScheduledClassStatus\Create.cshtml" />
+    <Content Include="Views\ScheduledClassStatus\Delete.cshtml" />
+    <Content Include="Views\ScheduledClassStatus\Details.cshtml" />
+    <Content Include="Views\ScheduledClassStatus\Edit.cshtml" />
+    <Content Include="Views\ScheduledClassStatus\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\StudentStatus\Create.cshtml" />
+    <Content Include="Views\StudentStatus\Delete.cshtml" />
+    <Content Include="Views\StudentStatus\Details.cshtml" />
+    <Content Include="Views\StudentStatus\Edit.cshtml" />
+    <Content Include="Views\StudentStatus\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SAT.DATA.EF\SAT.DATA.EF.csproj">
+      <Project>{280f1ed1-4fe5-4b82-b67f-2a35aa5f6e24}</Project>
+      <Name>SAT.DATA.EF</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

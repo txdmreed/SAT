@@ -4,6 +4,7 @@ namespace SAT.UI.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        
         [HttpGet]
         public ActionResult Index()
         {
@@ -11,7 +12,6 @@ namespace SAT.UI.MVC.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";

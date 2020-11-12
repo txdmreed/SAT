@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace SAT.UI.MVC.Controllers
 {
-    [Authorize]
+
     public class AccountController : Controller
     {
         public AccountController()
@@ -88,6 +88,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/VerifyCode
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> VerifyCode(string provider, string returnUrl, bool rememberMe)
@@ -107,6 +108,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/VerifyCode
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -133,6 +135,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/Register
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public ActionResult Register()
@@ -142,6 +145,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/Register
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -168,6 +172,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ConfirmEmail
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
@@ -182,6 +187,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ForgotPassword
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public ActionResult ForgotPassword()
@@ -191,6 +197,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/ForgotPassword
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -218,6 +225,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ForgotPasswordConfirmation
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public ActionResult ForgotPasswordConfirmation()
@@ -227,6 +235,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ResetPassword
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public ActionResult ResetPassword(string code)
@@ -236,6 +245,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/ResetPassword
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -262,6 +272,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ResetPasswordConfirmation
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public ActionResult ResetPasswordConfirmation()
@@ -271,6 +282,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/ExternalLogin
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -282,6 +294,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/SendCode
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> SendCode(string returnUrl, bool rememberMe)
@@ -298,6 +311,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/SendCode
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -318,6 +332,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // GET: /Account/ExternalLoginCallback
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
@@ -349,6 +364,7 @@ namespace SAT.UI.MVC.Controllers
 
         //
         // POST: /Account/ExternalLoginConfirmation
+        [Authorize(Roles = "Admin, Scheduler")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]

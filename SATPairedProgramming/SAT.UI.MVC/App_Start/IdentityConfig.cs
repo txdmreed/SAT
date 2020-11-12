@@ -114,8 +114,8 @@ namespace SAT.UI.MVC.Models
         public static void InitializeIdentityForEF(ApplicationDbContext db) {
             var userManager = HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var roleManager = HttpContext.Current.GetOwinContext().Get<ApplicationRoleManager>();
-            const string name = "admin@example.com";
-            const string password = "Admin@123456";
+            const string name = "newadmin@example.com";
+            const string password = "Newpassword123456!";
             const string roleName = "Admin";
 
             //Create Role Admin if it does not exist
