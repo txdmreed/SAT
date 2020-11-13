@@ -14,6 +14,8 @@ namespace SAT.UI.MVC.Controllers
     {
         private SATDatabaseEntities db = new SATDatabaseEntities();
 
+
+
         // GET: Cours
         [Authorize(Roles = "Admin")]
         public ActionResult Index()
@@ -61,6 +63,11 @@ namespace SAT.UI.MVC.Controllers
             }
 
             return View(cours);
+        }
+        [HttpGet]
+        public ActionResult CourseTiles()
+        {
+            return View(db.Courses.ToList());
         }
 
         // GET: Cours/Edit/5

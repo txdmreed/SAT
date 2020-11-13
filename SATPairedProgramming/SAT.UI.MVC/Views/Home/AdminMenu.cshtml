@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AdminMenu";
+}
+
+
+<h4>Admin Menu</h4>
+
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Admin Account Information", "Index", "Account")</li>
+        <li>@Html.ActionLink("Courses", "Index", "Cours")</li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li>@Html.ActionLink("Roles Admin", "Index", "RolesAdmin")</li>
+        <li>@Html.ActionLink("Scheduled Classes", "Index", "ScheduledClasses")</li>
+        <li>@Html.ActionLink("Scheduled Class Statuses", "Index", "ScheduledClassStatus")</li>
+        <li>@Html.ActionLink("Students", "Index", "Students")</li>
+        <li>@Html.ActionLink("Student Statuses", "Index", "Student Status")</li>
+        <li>@Html.ActionLink("User Administration", "Index", "UsersAdmin")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>

@@ -26,5 +26,14 @@ namespace SAT.UI.MVC.Controllers
 
             return View();
         }
+
+        [Authorize (Roles ="Admin,Scheduler")]
+        [HttpGet]
+        public ActionResult AdminMenu()
+        {
+            ViewBag.Message = "Admin Menu";
+
+            return View();
+        }
     }
 }

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SAT.DATA.EF.Cours>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Courses</h2>
+
+
+@foreach (var item in Model)
+{
+    <div class="gContainer">
+        <div class="gContent">
+            <h2 id="courseName">@Html.DisplayFor(modelItem => item.CourseName)</h2>
+            <p>@Html.ActionLink("Details", "Details", new { id = item.CourseId })</p>
+
+            @if (User.IsInRole("Admin"))
+            {
+                <p class="gFooterLeft">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.CourseId })
+                </p>
+                <p class="gFooterRight">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CourseId })
+                </p>
+            }
+        </div>
+    </div>
+}
+
+
+
+
