@@ -50,3 +50,11 @@
     padding: 2em;
     margin: 2em;
 }
+
+.padder{
+    margin: 100px;
+}
+
+.centerme {
+    text-align: center;
+}

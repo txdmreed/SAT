@@ -1,6 +1,4 @@
-﻿ 
-
-   <!-- ***** Main Banner Area Start ***** -->
+﻿<!-- ***** Main Banner Area Start ***** -->
 
 <section class="section main-banner" id="top" data-section="section1">
     <video autoplay muted loop id="bg-video">
@@ -11,9 +9,9 @@
         <div class="caption">
             <h6>Graduate School of Management</h6>
             <h2><em>Your</em> Classroom</h2>
-            <div class="main-button">
-                <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
-            </div>
+            @*<div class="main-button">
+                    <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+                </div>*@
         </div>
     </div>
 </section>
@@ -30,9 +28,9 @@
                             <h4><i class="fa fa-pencil"></i>All Courses</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
+                            <p>See a ton of our awesome courses! Learn all kinds of cool skills like Trickery, and Time Travel with world reknowned instructors like Doc Brown and Loki.</p>
+                            @*<p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>*@
+                            <div>@Html.ActionLink("Courses List", "Index", "Cours")</div>
                         </div>
                     </div>
                 </div>
@@ -44,9 +42,11 @@
                             <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section3">Details</a></div>
+                            <p>We even teach classes online from the comfort of your own home! Because we're Super Awesome.</p>
+                            @*<p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>*@
+                            @*<div class="scroll-to-section"><a href="#section3">Details</a></div>*@
+                            <div>@Html.ActionLink("Courses List", "Index", "Cours")</div>
+
                         </div>
                     </div>
                 </div>
@@ -55,12 +55,12 @@
                 <div class="features-post third-features">
                     <div class="features-content">
                         <div class="content-show">
-                            <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                            <h4><i class="fa fa-book"></i>World-Reknowned Instructors</h4>
                         </div>
                         <div class="content-hide">
-                            <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
-                            <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
-                            <div class="scroll-to-section"><a href="#section4">Read More</a></div>
+                            <p>See a list of some our world-reknowned </p>
+                            @*<p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>*@
+                            <div>@Html.ActionLink("Courses List", "Index", "Cours")</div>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>Best Education</h4>
-                                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                                    <p>Education is super important and ours is the best!</p>
                                 </div>
                             </div>
                         </article>
@@ -103,8 +103,8 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>Top Level</h4>
-                                    <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p>
-                                    <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+                                    <p>Tippity-top, the toppest of the top. When you attend Super Awesome College you're automatically put at the top of the list.</p>
+                                    @*<p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>*@
                                 </div>
                             </div>
                         </article>
@@ -115,7 +115,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h4>Quality Meeting</h4>
-                                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
+                                    <p>Quality is the name of the game at Super Awesome college. Our instructors care about their students almost as much as they care about themselves.</p>
                                 </div>
                             </div>
                         </article>
@@ -194,7 +194,7 @@
     </div>
 </section>
 
-<section class="section courses" data-section="section4">
+@*<section class="section courses" data-section="section4">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -349,4 +349,4 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@

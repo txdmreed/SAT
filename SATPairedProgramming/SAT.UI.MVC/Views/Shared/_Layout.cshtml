@@ -44,14 +44,15 @@
         <nav id="menu" class="main-nav" role="navigation">
             <ul class="main-menu">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li class="has-submenu">
+                @*<li class="has-submenu">
                     <a href="#section2">About Us</a>
                     <ul class="sub-menu">
                         <li><a href="#section2">Why Choose Us?</a></li>
                         <li><a href="#section3">Sign Up Now!</a></li>
                         <li><a href="#section3">Choose a Course</a></li>
-                    </ul>
-                </li>
+                    </ul>*@
+                
+                
                 <li>@Html.ActionLink("Courses", "Index", "Cours")</li>
                 <!-- <li><a href="#section5">Video</a></li> -->
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -78,6 +79,7 @@
                     </ul>
                     }
                 </li>
+                </ul>
 
 
 </nav>
