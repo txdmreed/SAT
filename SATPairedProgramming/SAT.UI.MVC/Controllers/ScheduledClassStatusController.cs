@@ -48,7 +48,7 @@ namespace SAT.UI.MVC.Controllers
         // POST: ScheduledClassStatus/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [Authorize(Roles = "Admin=")]
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "SCSID,SCSName")] ScheduledClassStatus scheduledClassStatus)
